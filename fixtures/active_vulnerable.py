@@ -5,3 +5,8 @@ def test():
     user_id = request.args.get("user")
     db = sqlite3.connect("app.db")
     db.execute(f"SELECT * FROM users WHERE id = {user_id}")
+
+def search():
+    name = request.args.get("name")
+    conn = sqlite3.connect("app.db")
+    conn.execute(f"SELECT * FROM users WHERE name = '{name}'")
