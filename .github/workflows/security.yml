@@ -2,7 +2,7 @@ name: Security Audit
 on: [push, pull_request]
 
 jobs:
-  tcs-scan:
+  security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
